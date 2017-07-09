@@ -48,6 +48,20 @@ You should be here on campus ~8 hours exclusive of lunch.
 
 ## Facilities
 
+* We run a multi-purpose facility on a very coordinated scheduled.
+    * Day 201-301
+    * Night 201
+    * 500 Level
+    * Meetups
+* Please be mindful of your belongings and trash, food, dishes and glasses, etc.
+* Use tables, big monitors, etc. for real lab work.
+
+More from Megan...
+
+### Mentorship and Support
+
+Let us know, we're here to help...
+
 ## Code of Conduct
 
 Let's [read it](https://github.com/codefellowspdx/code-of-conduct)!
