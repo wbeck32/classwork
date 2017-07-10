@@ -1,8 +1,5 @@
 const assert = require('assert');
-
-function greeter() {
-
-}
+const greeter = require('../src/greeter');
 
 describe('greeting library', () => {
     it('greets by name', () => {
