@@ -12,7 +12,7 @@ This repository contains all of the in-class material. It is organized by week a
 ### Calendar 
 
 * No class on Monday September 4th (Labor Day)
-* 11th week added. Final day of class: Friday September 18th
+* 11th week added. Final day of class: Friday September 22th
 
 ### Daily Activities
 
