@@ -3,7 +3,7 @@ const greeter = require('../src/greeter');
 
 describe('greeting library', () => {
     it('greets by name', () => {
-        const greeting = greeter('Ryu');
+        const greeting = greeter({ name: 'Ryu' });
         assert.equal(greeting, 'Hello Ryu!');
     });
 
