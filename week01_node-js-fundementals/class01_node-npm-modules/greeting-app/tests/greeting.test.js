@@ -6,4 +6,9 @@ describe('greeting library', () => {
         const greeting = greeter('Ryu');
         assert.equal(greeting, 'Hello Ryu!');
     });
+
+    it('default to stranger when no name is given', () => {
+        const greeting = greeter();
+        assert.equal(greeting, 'Hello Stranger!');
+    });
 });
