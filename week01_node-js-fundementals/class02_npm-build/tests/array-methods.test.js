@@ -1,5 +1,5 @@
 const assert = require('assert');
-const { map, forEach } = require('../lib/array-methods');
+const { map, forEach, filter, reduce } = require('../lib/array-methods');
 
 describe('array methods', () => {
 
@@ -29,6 +29,16 @@ describe('array methods', () => {
 
     it('forEach passes index as second arg', () => {
         testIndexes(forEach);
+    });
+
+    it('filter', () => {
+        const array = [1, 2, 3];
+        const oddNumber = filter(array, x => x%2 === 1);
+        assert.deepEqual(oddNumber, [1, 3]);
+    });
+
+    it('filter passes index as second arg', () => {
+        testIndexes(filter);
     });
 
 });
