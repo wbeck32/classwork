@@ -1,13 +1,5 @@
 const assert = require('assert');
-
-// SUT System under test
-function map(array, callback) {
-    const mapped = [];
-    for(let i = 0; i < array.length; i++) {
-        mapped[i] = callback(array[i], i);
-    }
-    return mapped;
-}
+const { map } = require('../lib/array-methods');
 
 describe('array methods', () => {
 
