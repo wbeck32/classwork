@@ -3,6 +3,13 @@ const { map, forEach } = require('../lib/array-methods');
 
 describe('array methods', () => {
 
+    function testIndexes(fn) {
+        const array = [1, 2, 3];
+        const indexes = [];
+        fn(array, (x, i) => indexes.push(i));
+        assert.deepEqual(indexes, [0, 1, 2]);
+    }
+
     it('map', () => {
         const array = [1, 2, 3];
         const mapped = map(array, x => x * x);
@@ -10,9 +17,7 @@ describe('array methods', () => {
     });
 
     it('map passes index as second arg', () => {
-        const array = [1, 2, 3];
-        const mapped = map(array, (x, i) => i);
-        assert.deepEqual(mapped, [0, 1, 2]);
+        testIndexes(map);
     });
 
     it('forEach', () => {
@@ -23,9 +28,7 @@ describe('array methods', () => {
     });
 
     it('forEach passes index as second arg', () => {
-        const array = [1, 2, 3];
-        const indexes = [];
-        forEach(array, (x, i) => indexes.push(i));
-        assert.deepEqual(indexes, [0, 1, 2]);
+        testIndexes(forEach);
     });
+
 });
