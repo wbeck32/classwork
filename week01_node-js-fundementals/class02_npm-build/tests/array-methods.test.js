@@ -41,4 +41,30 @@ describe('array methods', () => {
         testIndexes(filter);
     });
 
+    it('reduce', () => {
+        const array = [1, 2, 3];
+        const sum = reduce(array, (total, x) => total + x, 0);
+        assert.equal(sum, 6);
+    });
+
+    it('reduce passes index as 3rd argument', () => {
+        const array = [1, 2, 3];
+        const indexes = [];
+        reduce(array, (x, y, i) => indexes.push(i), 0);
+        assert.deepEqual(indexes, [0, 1, 2]);
+    });
+
+    it('reduce default to first item when no initial Value', () => {
+        const array = [1, 2, 3];
+        const sum = reduce(array, (total, x) => total + x);
+        assert.equal(sum, 6);
+    });
+
+    it('reduce no init value, passes index as 3rd argument', () => {
+        const array = [1, 2, 3];
+        const indexes = [];
+        reduce(array, (x, y, i) => indexes.push(i));
+        assert.deepEqual(indexes, [1, 2]);
+    });
+
 });

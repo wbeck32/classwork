@@ -24,9 +24,20 @@ function filter(array, callback) {
     return filtered;
 }
 
+function reduce(array, callback, initialValue) {
+    const hasInitialValue = initialValue !== undefined;
+    if(!hasInitialValue) initialValue = array[0];
+    let i = hasInitialValue ? 0 : 1;
+    
+    for(; i < array.length; i++) {
+        initialValue = callback(initialValue, array[i], i);
+    }
+    return initialValue;
+}
 
 module.exports = { 
     map, 
     forEach, 
-    filter
+    filter,
+    reduce
 };
