@@ -25,10 +25,10 @@ function filter(array, callback) {
 }
 
 function reduce(array, callback, initialValue) {
-    const hasInit = initialValue !== undefined;
-    if(!hasInit) initialValue = array[0];
+    const noInit = initialValue === undefined;
+    if(noInit) initialValue = array[0];
 
-    for(let i = hasInit ? 0 : 1; i < array.length; i++) {
+    for(let i = noInit ? 1 : 0; i < array.length; i++) {
         initialValue = callback(initialValue, array[i], i);
     }
     return initialValue;
