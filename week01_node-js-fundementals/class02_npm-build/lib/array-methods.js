@@ -28,10 +28,11 @@ function reduce(array, callback, initialValue) {
     const noInit = initialValue === undefined;
     if(noInit) initialValue = array[0];
 
+    let accumulator = initialValue;
     for(let i = noInit ? 1 : 0; i < array.length; i++) {
-        initialValue = callback(initialValue, array[i], i);
+        accumulator = callback(accumulator, array[i], i);
     }
-    return initialValue;
+    return accumulator;
 }
 
 module.exports = { 
