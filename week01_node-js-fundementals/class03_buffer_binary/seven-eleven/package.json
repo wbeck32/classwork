@@ -8,8 +8,11 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "mocha tests",
-    "start": "npm test -- -w"
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "npm run test:run",
+    "test:run": "mocha tests",
+    "start": "npm run test:run -- -w"
   },
   "author": "Marty Nelson <marty@martypdx.com>",
   "license": "ISC",
