@@ -3,27 +3,27 @@ const shortid = require('shortid');
 class Store {
 
     constructor() {
-        this.list = [];
+        this._list = [];
     }
 
     save(object) {
         object._id = shortid.generate();
-        this.list.push(object);
+        this._list.push(object);
         return object;
     }
 
     get(_id) {
-        return this.list.find(o => o._id === _id) || null;
+        return this._list.find(o => o._id === _id) || null;
     }
 
     getAll() {
-        return this.list.slice();
+        return this._list.slice();
     }
 
     remove(_id) {
-        const index = this.list.findIndex(o => o._id === _id);
+        const index = this._list.findIndex(o => o._id === _id);
         if(index < 0) return { removed: false };
-        this.list.splice(index, 1);
+        this._list.splice(index, 1);
         return { removed: true };
     }
 }
