@@ -5,6 +5,8 @@
 
 ## Learning Objectives
 
+* Debug in VSCode
+* Control scope in testing
 * Explain what binary data means
 * Ditto Hex
 * Read, write, and manipulate encoded binary data using the Buffer class
