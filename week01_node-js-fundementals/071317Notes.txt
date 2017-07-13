@@ -1,0 +1,14 @@
+senior developer - don't let a project go off the rails. keep moving forward.
+
+TCP is byte-level protocol. It doesn't care about the content of your data, but it guarantees that your data has been sent correctly
+
+
+
+send json object as JSON.stringify();
+
+HTTP is like an envelope - headers, metadata - it relies on TCP
+TCP sends the data
+
+comes to server as an HTTP request
+
+alter data by using JSON.parse() to turn it back to json object and puts it into memory.
