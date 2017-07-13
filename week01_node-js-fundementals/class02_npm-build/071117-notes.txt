@@ -14,3 +14,5 @@ git fetch upstream
 git merge upstream/master
 - OR -
 git pull upstream master
+
+git push wbeck master
