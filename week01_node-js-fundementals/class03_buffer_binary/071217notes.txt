@@ -1,0 +1,62 @@
+mocha
+describe.only
+it.only
+describe.skip
+it.skip
+
+nodemon - restarts?
+
+npm run scripts that aren't start or test in the package.json
+ex: npm
+
+Our individual tests are unit tests.
+Integration tests test all the unit tests together.
+System level tests use provided data
+https://en.wikipedia.org/wiki/Regression_testing
+Regression testing is a type of software testing which verifies that software which was previously developed and tested still performs the same way after it was changed or interfaced with other software. Changes may include software enhancements, patches, configuration changes, etc.
+
+
+don't do this
+const fs = require('graceful-fs');
+fs.readFileSync('some-file-or-whatever');
+
+binary - computers use it because
+- there are only two states
+- electricity works this way - logic gates
+
+quantum computing - use powers of 4 instead of 2
+
+hex in css - units
+
+0x25 = 37
+37 in binary = 0b00100101
+byte = 4bits
+
+8-bit int - can only be up to 255;
+16-bit int -
+32-bit int -
+
+
+
+big-endian - most significant first ordered by bytes not bits so 8-bit ints that are only one byte has neither BE or LE.
+
+signed = first digit 1
+unsigned = first digit 0
+
+UTF-8 = 8 bytes
+serialization = put
+
+buffer in node. gives you access to binary data as an object - many functions
+
+
+heap is buffer that collects the parts of the file that are scattered over the ssd.
+
+hex fits well with binary because 16^2 = 2^8 = 256
+
+
+loop through body pixels to transform
+
+git - line commit
+
+A standard RGB image in jpeg format has 24bits per pixel...
+Bitmap 8-bits per pixel

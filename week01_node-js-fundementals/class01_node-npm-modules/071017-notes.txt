@@ -1,0 +1,26 @@
+Competent => Proficient => Fluent
+
+Fluency - what you know when someone wakes you up in the middle of the night
+
+House of cards
+
+Process: allocation of CPU, OS level construct to divide CPU, dedicated memory
+
+server: set of processes (monitoring) - so important it gets its own server
+  web server - also static files
+  database server
+
+Module - separate files for an app/program
+
+Node LTS - long term support
+Even version numbers are stable
+Odd numbers are betas
+
+
+Testing steps - Red, Green, Refactor
+
+npm install to add to nodejs site
+
+in npm  -- means pass this flag to to the next command
+
+`npm start` will run the tests with watch
