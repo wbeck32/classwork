@@ -1,13 +1,9 @@
 const fs = require('fs');
 const path = require('path');
-const mkdirp = require('mkdirp')
 
 module.exports = class Store {
     constructor(root) {
         this.root = root;
-        mkdirp(root, err => {
-            if(err) console.log(err);
-        });
     }
 
     save(object, callback) {
@@ -23,4 +19,6 @@ module.exports = class Store {
             callback(null, object);
         });
     }
+
+    // moar methods...
 }
