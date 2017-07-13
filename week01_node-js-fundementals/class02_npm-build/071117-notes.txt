@@ -11,4 +11,6 @@ to merge with forked repo
 git clone git@github.com:YOUR-USERNAME/YOUR-FORKED-REPO.git
 git remote add upstream git://github.com/ORIGINAL-DEV-USERNAME/REPO-YOU-FORKED-FROM.git
 git fetch upstream
+git merge upstream/master
+- OR -
 git pull upstream master
