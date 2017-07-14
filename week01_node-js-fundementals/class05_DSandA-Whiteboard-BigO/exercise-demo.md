@@ -1,0 +1,1 @@
+Write a function that takes an string and returns the count of letter "a"'s

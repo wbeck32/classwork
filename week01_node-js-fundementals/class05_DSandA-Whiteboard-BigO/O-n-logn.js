@@ -1,4 +1,4 @@
-const count = 100000;
+const count = 1000000;
 
 const arr = [];
 

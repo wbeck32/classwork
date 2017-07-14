@@ -35,12 +35,11 @@ complexity functions.
 			* consistent font size
 			* level
     * Review best practices
-* Data Structures
-    * arrays
-    * dictionaries
-* Exercises:
-    1. one
-	1. two
+* Data Structures: arrays
+* Demo exercise
+* Exercise `one`
+* Data Structures: dictionaries/maps
+* Exercise `two`
 * Algorythms
     * Big O
         * [Big O Cheat Sheet](http://bigocheatsheet.com/)
