@@ -12,3 +12,17 @@ TCP sends the data
 comes to server as an HTTP request
 
 alter data by using JSON.parse() to turn it back to json object and puts it into memory.
+
+
+on the server
+- each module is wrapped in an imaginary function
+- modules enter queue and run in order
+- the node process on the client ends when the queue is empty
+
+event loop - runs the functions
+
+waiting room - for timeout functions. when function is timed out, goes into the queue then to the event loop
+
+throw is a synchronous concept
+
+callback is for asynchronous

@@ -36,7 +36,9 @@ byte = 4bits
 16-bit int -
 32-bit int -
 
-
+// four binary digits = 8 bits
+//
+// hex 42 = 0100 0010
 
 big-endian - most significant first ordered by bytes not bits so 8-bit ints that are only one byte has neither BE or LE.
 
