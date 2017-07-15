@@ -8,7 +8,7 @@ for ( var i = 0; i < count; i++ ) {
 
 function findDups( arr ) {
 	arr.forEach( ( each, i ) => {
-		if ( arr.indexOf( each, i + 1 ) !== -1 ) return true;
+		if(arr.indexOf( each, i + 1 ) !== -1) return true;
 	});
 	return false;
 }
