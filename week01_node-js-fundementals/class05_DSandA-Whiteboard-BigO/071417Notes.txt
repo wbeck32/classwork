@@ -1,0 +1,9 @@
+dictionary = has different functions
+
+BigO
+
+Time Complexity
+
+
+
+Space Complexity
