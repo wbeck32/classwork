@@ -1,0 +1,21 @@
+event listeners listen to event emitters
+
+
+
+REST is an acronym for the Representational State Transfer architectural style for distributed hypermedia systems.
+
+POST returns a new object
+
+create a new module for each http request
+
+server for running is a different port than the server for testing
+
+
+check out superagent utitlity
+
+es6katas.org
+
+POST hides request data
+GET shows query string in the URL\
+
+seperate file for list of facts, test can be make sure that the string is in the file

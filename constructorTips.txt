@@ -1,0 +1,26 @@
+class Dogs {
+    this.name = '',
+    this.breed = ''
+}
+
+var fido = new Dogs;
+
+fido.breed = null;
+
+
+function save(fido) {
+    fido._id = shortid.generate();
+    fido.breed = 'y';
+    return fido;
+}
+
+fido.breed = 'y';
+
+console.log(fido) {
+  {
+    _id : '100',
+    name : '',
+    breed: 'x'
+}
+
+}
