@@ -32,8 +32,8 @@ const server = http.createServer((req, res) => {
 
         res.end('<pre>' + cowsay.say({
             text : response,
-            e : "oO",
-            T : "U "
+            e : 'oO',
+            T : 'U '
         }) + '</pre>');
     }
 });
