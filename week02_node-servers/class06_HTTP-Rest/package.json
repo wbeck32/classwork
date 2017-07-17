@@ -4,12 +4,19 @@
   "description": "## Questions, Feedback",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha tests",
+    "test:watch": "npm test -- -w",
     "start": "node server.js"
   },
   "author": "Marty Nelson <marty@martypdx.com>",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^4.2.0"
+    "chai": "^4.1.0",
+    "chai-http": "^3.0.0",
+    "eslint": "^4.2.0",
+    "mocha": "^3.4.2"
+  },
+  "dependencies": {
+    "cowsay": "^1.1.9"
   }
 }
