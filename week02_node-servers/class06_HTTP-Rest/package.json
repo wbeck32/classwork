@@ -1,0 +1,22 @@
+{
+  "name": "class06_http-rest",
+  "version": "1.0.0",
+  "description": "## Questions, Feedback",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha tests",
+    "test:watch": "npm test -- -w",
+    "start": "node server.js"
+  },
+  "author": "Marty Nelson <marty@martypdx.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.0",
+    "chai-http": "^3.0.0",
+    "eslint": "^4.2.0",
+    "mocha": "^3.4.2"
+  },
+  "dependencies": {
+    "cowsay": "^1.1.9"
+  }
+}

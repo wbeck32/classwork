@@ -1,30 +1,40 @@
 # Class 06 Http and Rest
 
+## Questions, Feedback
+
+* Survey Feedback:
+	* Week one was intense
+	* Enough help? Niilo, Amy, Marty
+	* Time management is tough
+		* Sustainable Pace and Quality
+		* Extended efforts in the zone
+
+* Code cleanliness
+	* Ongoing part of the process
+	* Don't plan for heroic efforts
+
+
 ## Today's Learning Objectives
 
 1. Create HTTP server using Node.js
-2. Differentiate HTTP requests based on path (`url`) and verb (`http`) and other request factors (`query`, `content-type`)
+2. Differentiate HTTP requests based on:
+	* path (`url`)
+	* verb (`http`)
+	* Other request factors (`query`, `content-type`)
 3. E2E servers using Mocha (and chai-http for HTTP)
 
-* [Three function passing patterns](https://github.com/martypdx/workshop-promises-fat-arrows/blob/master/async-js-patterns.md) 
+## Function Passing in JavaScript
 
-## New Tool
+[Three function passing patterns](https://github.com/martypdx/workshop-promises-fat-arrows/blob/master/async-js-patterns.md)
 
-* [ChaiJS](http://chaijs.com/)
-* [chai-http](http://chaijs.com/plugins/chai-http/)
+## New Tools PART 1
 
-### E2E Testing Servers
-
-* Using "real" clients for end-to-end (E2E) Testing
-* Focus on golden path, defer to unit tests for more refined functionality 
-* use setup and teardown
-* Node Clients
-	* HTTP (node built-in module)
-	* Request Libraries (request, superagent, etc)
-	* Chai HTTP (SuperAgent)
-* Postman
+* [Postman](https://www.getpostman.com/)
+* `nodemon`
 
 ### HTTP
+
+An envelop with a letter (or a postcard)
 
 * [ Http Protocol explained ](http://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177)
 * Path (nouns):
@@ -33,7 +43,7 @@
 	* hostname ( host + port )
 	* resource path
 	* query
-* Method (verbs): 
+* Method (verbs):
 	* GET, POST, PUT, DELETE, PATCH
 	* plus more ...
 * REST
@@ -58,17 +68,41 @@ often used for a detail view (Read)
 ### Query Parameters
 
 Represent refinements or modifications to how the request should be processed:
-* `?limit=100&page=3` - return results 201-300 
+* `?limit=100&page=3` - return results 201-300
 * `?format=xml` - control results format (might see on third party API)
 * `?access_token=123edfdo3o3o23` - provide a token for authentication
 * `?name=Smith` - provide query parameter directly
 * `?query={ name: 'Smith' }` - provide query parameters that filter the results
 
+<<<<<<< HEAD
 Check out built-in module `const url = require('url');` Which includes query methods, but
 you can also use built-in `const qs = require('querystring');` for helpful methods.
+=======
+Check out built-in module `const url = require('url');` Which includes query methods, but you can also use built-in `const qs = require('querystring');` for helpful methods.
+>>>>>>> 1c19e5f31c509176e3c796e97628936d0a9d2362
 
 HTTP status codes:
 * `200` OK
 * `300` (about the resource, hasn't changed, redirect here)
 * `400` user did something wrong
+<<<<<<< HEAD
 * `500` something went wrong on our server
+=======
+* `500` something went wrong on our server
+
+## New Tools PART 2
+
+* [ChaiJS](http://chaijs.com/)
+* [chai-http](http://chaijs.com/plugins/chai-http/)
+
+### E2E Testing Servers
+
+* Using "real" clients for end-to-end (E2E) Testing
+* Focus on golden path, defer to unit tests for more refined functionality
+* use setup and teardown
+* Node Clients
+	* HTTP (node built-in module)
+	* Request Libraries (request, superagent, etc)
+	* Chai HTTP (SuperAgent)
+* Postman
+>>>>>>> 1c19e5f31c509176e3c796e97628936d0a9d2362
