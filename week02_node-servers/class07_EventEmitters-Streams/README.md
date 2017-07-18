@@ -1,7 +1,10 @@
 # Class 06 EventEmitters and Streams
 
-## Questions, Feedback
+## Questions and Feedback
+* ?
 * Module export patterns
+* `this` keyword
+* nested ifs (time permitting)
 
 ## Today's Learning Objectives
 
