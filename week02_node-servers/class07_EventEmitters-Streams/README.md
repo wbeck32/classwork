@@ -1,9 +1,9 @@
 # Class 06 EventEmitters and Streams
 
 ## Questions, Feedback
+* Module export patterns
 
 ## Today's Learning Objectives
-
 
 1. Subscribe to an EventEmitter (event publisher) via function handlers.
 1. Read and write from/to a stream
