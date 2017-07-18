@@ -1,0 +1,15 @@
+{
+  "name": "class07_eventemitters-streams",
+  "version": "1.0.0",
+  "description": "## Questions, Feedback",
+  "main": "echo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marty Nelson <marty@martypdx.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^4.2.0",
+    "mocha": "^3.4.2"
+  }
+}
