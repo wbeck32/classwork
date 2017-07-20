@@ -1,4 +1,5 @@
 const connection = require('../db');
+const notFound = require('../utils/not-found');
 
 module.exports = function cats(req, res) {
     const cats = connection.db.collection('cats');
@@ -17,4 +18,7 @@ module.exports = function cats(req, res) {
             .then(cats => res.end(JSON.stringify(cats)))
             .catch(console.log);
     } 
+    else {
+        notFound(req, res);
+    }
 }
