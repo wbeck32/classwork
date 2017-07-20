@@ -1,0 +1,23 @@
+{
+  "name": "copy-dir",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "author": "Marty Nelson <marty@martypdx.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^4.2.0",
+    "mocha": "^3.4.2",
+    "rimraf": "^2.6.1"
+  },
+  "dependencies": {
+    "mkdirp": "^0.5.1"
+  }
+}
