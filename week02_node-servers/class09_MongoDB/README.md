@@ -19,6 +19,12 @@ Class 09 MongoDB
 
 ## Agenda
 
+### Distributed Systems
+* 3-tier
+	* Database
+	* Server
+	* Client
+
 ### MongoDB
 
 * Different tools:
