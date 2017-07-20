@@ -17,6 +17,7 @@ function app(req, res) {
             const route = routes[req.url.route] || notFound;
             route(req, res);
         })
+        .catch(console.log);
 
 
 }
