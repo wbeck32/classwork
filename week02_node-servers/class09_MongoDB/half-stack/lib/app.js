@@ -10,8 +10,14 @@ function app(req, res) {
     res.setHeader('Content-Type', 'application/json');
     req.url = parseUrl(req.url);
 
-    const route = routes[req.url.route];
-    route(req, res);
+    bodyParser(req)
+        .then(body => req.body = body)
+        .then(() => {
+            const route = routes[req.url.route];
+            route(req, res);
+        })
+
+
 }
 
 module.exports = app;

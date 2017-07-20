@@ -1,12 +1,10 @@
 const connection = require('../db');
-const bodyParser = require('../body-parser');
 
 module.exports = function cats(req, res) {
     const cats = connection.db.collection('cats');
 
     if(req.method === 'POST') {
-        bodyParser(req)
-            .then(cat => cats.insert(cat))
+        cats.insert(req.body)
             .then(result => result.ops[0])
             .then(saved => {
                 res.end(JSON.stringify(saved));
