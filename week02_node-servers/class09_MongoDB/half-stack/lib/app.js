@@ -1,6 +1,7 @@
-const bodyParser = require('./body-parser');
-const parseUrl = require('./parse-url');
+const bodyParser = require('./utils/body-parser');
+const parseUrl = require('./utils/parse-url');
 const cats = require('./routes/cats');
+const notFound = require('./utils/not-found');
 
 const routes = {
     cats
@@ -13,7 +14,7 @@ function app(req, res) {
     bodyParser(req)
         .then(body => req.body = body)
         .then(() => {
-            const route = routes[req.url.route];
+            const route = routes[req.url.route] || notFound;
             route(req, res);
         })
 
