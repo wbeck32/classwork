@@ -62,4 +62,30 @@ app.delete('/tourists/:id', (req, res) => {
         .catch(console.log);    
 });
 
+app.post('/tourists/:id/favorites', (req, res) => {
+    const Tourists = connect.db.collection('tourists');
+    Tourists.findOneAndUpdate({ 
+        _id: new ObjectID(req.params.id)
+    },{ 
+        $push: { favorites: req.body.favorite } 
+    }, {
+        returnOriginal: false
+    })
+    .then(({ value }) => res.send(value))
+    .catch(console.log);
+});
+
+app.delete('/tourists/:id/favorites', (req, res) => {
+    const Tourists = connect.db.collection('tourists');
+    Tourists.findOneAndUpdate({ 
+        _id: new ObjectID(req.params.id)
+    },{ 
+        $pull: { favorites: req.body.favorite } 
+    }, {
+        returnOriginal: false
+    })
+    .then(({ value }) => res.send(value))
+    .catch(console.log);
+});
+
 module.exports = app;
