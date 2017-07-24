@@ -64,10 +64,15 @@ app.delete('/tourists/:id', (req, res) => {
 
 app.post('/tourists/:id/favorites', (req, res) => {
     const Tourists = connect.db.collection('tourists');
+    const favorites = req.body.favorite ? [favorite] : req.body.favorites;
+
     Tourists.findOneAndUpdate({ 
         _id: new ObjectID(req.params.id)
     },{ 
-        $push: { favorites: req.body.favorite } 
+        // $addToSet won't add dups, $push will push again
+        // $each push each of the items in the array (otherwise we would
+        // push an array as a single item)
+        $addToSet: { favorites: { $each: favorites } } 
     }, {
         returnOriginal: false
     })
