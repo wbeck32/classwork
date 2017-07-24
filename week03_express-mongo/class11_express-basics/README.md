@@ -30,9 +30,6 @@ addons:
 * “Starting” an express app, 
 	* just _httpServer_, ie .listen() vs 
 	* http.createServer(app)
-* “Starting” an express app, 
-	* just _httpServer_, ie .listen() vs 
-	* http.createServer(app)
 * Setup app routing _with ExpressJS_ using 
 method and path matching.
 * Use `:id` and `req.params` to capture dynamic path parts
