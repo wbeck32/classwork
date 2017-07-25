@@ -1,3 +1,5 @@
+/* eslint no-console: off */
+
 // core express import
 const express = require('express');
 // call "express()" to make an app
@@ -7,7 +9,7 @@ const path = require('path');
 // read body of request and add as req.body
 const bodyParser = require('body-parser');
 // for making mongodb "_id"'s
-const ObjectID = require('mongodb').ObjectID
+const ObjectID = require('mongodb').ObjectID;
 // for getting access to our needed collections
 const connect = require('./db');
 
@@ -64,7 +66,7 @@ app.delete('/tourists/:id', (req, res) => {
 
 app.post('/tourists/:id/favorites', (req, res) => {
     const Tourists = connect.db.collection('tourists');
-    const favorites = req.body.favorite ? [favorite] : req.body.favorites;
+    const favorites = req.body.favorite ? [req.body.favorite] : req.body.favorites;
 
     Tourists.findOneAndUpdate({ 
         _id: new ObjectID(req.params.id)
@@ -76,8 +78,8 @@ app.post('/tourists/:id/favorites', (req, res) => {
     }, {
         returnOriginal: false
     })
-    .then(({ value }) => res.send(value))
-    .catch(console.log);
+        .then(({ value }) => res.send(value))
+        .catch(console.log);
 });
 
 app.delete('/tourists/:id/favorites', (req, res) => {
@@ -89,8 +91,8 @@ app.delete('/tourists/:id/favorites', (req, res) => {
     }, {
         returnOriginal: false
     })
-    .then(({ value }) => res.send(value))
-    .catch(console.log);
+        .then(({ value }) => res.send(value))
+        .catch(console.log);
 });
 
 module.exports = app;
