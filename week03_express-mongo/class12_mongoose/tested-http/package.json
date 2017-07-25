@@ -1,0 +1,16 @@
+{
+  "name": "class12_mongoose",
+  "version": "1.0.0",
+  "description": "## Questions and Issues?",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "author": "Marty Nelson <marty@martypdx.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.0",
+    "chai-http": "^3.0.0",
+    "mocha": "^3.4.2"
+  }
+}
