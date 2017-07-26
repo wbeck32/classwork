@@ -60,3 +60,13 @@ express error handling middleware functions
 		* Body Parser
 * Middleware error handling
 	* Mob Program: Error Handler
+
+## Clean code
+
+### Modularized express project
+* `lib`
+	* `models`
+	* `routes`
+	* `app.js`
+	* [util folders]
+	* [other top-level important .js]
