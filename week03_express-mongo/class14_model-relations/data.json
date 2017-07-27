@@ -1,0 +1,52 @@
+[
+    {
+        "_id": "597a610bf5b501abd07a8aad",
+        "name": "feather chaser",
+        "color": "chartreuse",
+        "silent": false,
+        "__v": 0
+    },
+    {
+        "_id": "597a6116f5b501abd07a8aae",
+        "name": "lazer pointer",
+        "color": "red",
+        "silent": true,
+        "__v": 0
+    },
+    {
+        "_id": "597a6138f5b501abd07a8aaf",
+        "name": "avian vanity mirror",
+        "silent": true,
+        "__v": 0
+    },
+    {
+        "_id": "597a6156f5b501abd07a8ab0",
+        "name": "caves",
+        "color": "rock",
+        "silent": true,
+        "__v": 0
+    }
+]
+
+[
+    {
+        "_id": "597a5f4cbb77f2ab6f1ae096",
+        "name": "Pixar",
+        "address": {
+            "city": "Emeryville",
+            "state": "CA",
+            "_id": "597a5f4cbb77f2ab6f1ae097"
+        },
+        "__v": 0
+    },
+    {
+        "_id": "597a5f59bb77f2ab6f1ae098",
+        "name": "Laika",
+        "address": {
+            "city": "Portland",
+            "state": "OR",
+            "_id": "597a5f59bb77f2ab6f1ae099"
+        },
+        "__v": 0
+    }
+]

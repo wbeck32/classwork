@@ -4,9 +4,32 @@ const Pet = require('../models/pet');
 
 router
     .get('/', (req, res, next) => {
+        // Populate child "Pet" with
+        // parent "Store" data
+        Pet.find()
+            .lean()
+            .select('name type store')
+            .populate({
+                path: 'store',
+                select: 'name'
+            })
+            .then(pets => res.send(pets))
+            .catch(next);
     })
 
     .get('/:id', (req, res, next) => {
+        Pet.findById(req.params.id)
+            .lean()
+            .populate({
+                path: 'store',
+                select: 'name'
+            })
+            .populate({
+                path: 'toys',
+                select: 'name color'
+            })
+            .then(pets => res.send(pets))
+            .catch(next);       
     })
 
     .post('/', (req, res, next) => {

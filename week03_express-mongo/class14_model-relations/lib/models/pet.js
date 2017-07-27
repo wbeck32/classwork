@@ -6,11 +6,10 @@ const schema = new Schema({
         type: String,
         required: true
     },
-    legs: {
-        type: Number,
+    type: {
+        type: String,
         required: true,
-        min: 0,
-        max: 8
+        enum: ['cat', 'dog', 'bird', 'lizard', 'fish', 'snake']
     },
     store: {
         type: Schema.Types.ObjectId,

@@ -10,4 +10,5 @@ const schema = new Schema({
     address: Address.schema
 });
 
+
 module.exports = mongoose.model('Store', schema);

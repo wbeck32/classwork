@@ -5,12 +5,30 @@ const Pet = require('../models/pet');
 
 router
     .get('/', (req, res, next) => {
-
+        Store.find()
+            .lean()
+            .then(stores => res.send(stores))
+            .catch(next);
     })
     
     .get('/:id', (req, res, next) => {
-
-            
+        // Add child "Pet" data to 
+        // parent "Store" by fetching
+        // child data and appending to 
+        // parent object
+        const storeId = req.params.id;
+        Promise.all([
+            Store.findById(storeId)
+                .lean(),
+            Pet.find({ store: storeId })
+                .select('name type')
+                .lean()
+        ])
+            .then(([store, pets]) => {
+                store.pets = pets;
+                res.send(store);
+            })
+            .catch(next);
     })
     
     .post('/', (req, res, next) => {
