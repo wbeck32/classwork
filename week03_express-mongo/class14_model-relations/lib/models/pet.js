@@ -22,4 +22,10 @@ const schema = new Schema({
     }]
 });
 
+schema.statics.existsFor = function(storeId) {
+    return this.find({ store: storeId })
+        .count()
+        .then(count => count > 0);
+};
+
 module.exports = mongoose.model('Pet', schema);

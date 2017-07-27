@@ -1,7 +1,7 @@
 const Router = require('express').Router;
 const router = Router();
 const Store = require('../models/store');
-const Pet = require('../models/pet');
+const Address = require('../models/address');
 
 router
     .get('/', (req, res, next) => {
@@ -12,34 +12,27 @@ router
     })
     
     .get('/:id', (req, res, next) => {
-        // Add child "Pet" data to 
-        // parent "Store" by fetching
-        // child data and appending to 
-        // parent object
-        const storeId = req.params.id;
-        Promise.all([
-            Store.findById(storeId)
-                .lean(),
-            Pet.find({ store: storeId })
-                .select('name type')
-                .lean()
-        ])
-            .then(([store, pets]) => {
-                store.pets = pets;
-                res.send(store);
-            })
+        Store.getDetail(req.params.id)
+            .then(store => res.send(store))
             .catch(next);
     })
     
     .post('/', (req, res, next) => {
-        new Store(req.body)
-            .save()
+        const { zip } = req.body;
+
+        const address = new Address({ zip });
+        address.populateFromZip()
+            .then(() => {
+                const store = new Store(req.body);
+                store.address = address;
+                return store.save();
+            })
             .then(store => res.send(store))
             .catch(next);
     })
     
     .delete('/:id', (req, res, next) => {
-        Store.findByIdAndRemove(req.params.id)
+        Store.verifyRemove(req.params.id)
             .then(store => res.send({ removed: !!store }))
             .catch(next);
     });
