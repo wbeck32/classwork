@@ -2,6 +2,9 @@
 
 ## Questions and Issues?
 
+* Pardon our dust...
+	* Classroom improvements
+	* Kitchen window repair
 * ?
 
 ## Today's Learning Objectives
