@@ -1,0 +1,9 @@
+Listeners = handlers
+
+on event, emit a handlers
+node uses stream for Listeners
+
+lab:
+options to use simple-db
+publish on npm
+pipe request stream to file
