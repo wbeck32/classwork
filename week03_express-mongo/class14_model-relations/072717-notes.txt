@@ -1,0 +1,26 @@
+Pets - Toys is many2many
+- each pet can have many toys and each toy can belong to many pets
+
+Pet
+id: Primary key
+store: Foreign key
+toys: Array of foreign keys
+
+populate function for foreign key data
+
+Promise.all lets you make two queries at the same time, but then wait until they're both done before using the info
+
+
+for env variables, create a .env file
+add it to .gitignore
+
+call process.env.keyname
+${process.env.keyname}
+node module dotenv
+
+look at query helpers
+virtual - functions that let you manipulate data as you get or save it
+virtual getters and setters
+
+
+many2many example - a recipe has several ingredients, each ingredient has a quantity

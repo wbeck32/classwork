@@ -1,0 +1,38 @@
+linked list is a tree with one branch
+
+a graph has no root
+
+DOM
+- child nodes - can include text
+- children - just tags
+
+recursion - function calls itself
+
+call stack : STACK - LIFO
+
+return pops something off the top of the stack
+
+function traverse(node, indent=''){
+    indent += '  ';
+    node.children.forEach(child => traverse(child, indent));
+}
+
+binary tree - each node has at most 2 children - left and right
+
+log2(n+1) -1 = level count
+n = number of nodes
+
+binary sort - left branch is smaller than parent, right branch is larger
+
+in-order - sorts
+
+
+function traverse(node) {
+    if(!node) return '';
+const str = ''
+str += traverse(node.left)
+str += node.data;
+str += traverse(node.right)
+return str;
+
+}
