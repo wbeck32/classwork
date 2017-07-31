@@ -4,6 +4,9 @@ width=30> Express and Mongoose Review - User Management and Auth
 
 ## Questions and Issues
 
+* Including related data
+    * Foreign Key (Id) in the document being retrieved? Use `.populate()`
+    * Key (Id) of the document being retrieved used in other document collection? Use `Promise.all` with `find` to both collection
 * ?
 
 ## Review Models and Routes
