@@ -13,6 +13,12 @@ width=30> Express and Mongoose Review - User Management and Auth
 
 * Cheat Sheets
 
+## Review some helpers
+* global `before`/`after`
+* e2e helpers
+    * `request`
+    * `db`
+
 ## Learning Objectives
 
 1. Create and add users by unique username and password using auth routes, mongoose and bcrypt
