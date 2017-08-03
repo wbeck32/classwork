@@ -1,0 +1,184 @@
+[{
+	"_id": {
+		"$oid": "58485d4b7bb5a1032294b6b1"
+	},
+	"name": "Zoro",
+	"rank": "swordsman",
+	"__v": 0,
+	"crew": {
+		"$oid": "582211b1100faec433ed3b39"
+	}
+},
+{
+	"_id": {
+		"$oid": "58485d627bb5a1032294b6b2"
+	},
+	"name": "Jane",
+	"rank": "Fierce Fighter",
+	"__v": 0,
+	"crew": {
+		"$oid": "58221406f5deffc7e8a17941"
+	}
+},
+{
+	"_id": {
+		"$oid": "58582380c7141bbebbf72f0a"
+	},
+	"name": "bill",
+	"rank": "cook",
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "585823aac7141bbebbf72f0b"
+	},
+	"name": "bob",
+	"rank": "cook",
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5858251ac7141bbebbf72f0c"
+	},
+	"name": "bob",
+	"rank": "cook",
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "58582526c7141bbebbf72f0d"
+	},
+	"name": "bob",
+	"rank": "cook",
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5858255dc7141bbebbf72f0e"
+	},
+	"name": "joe",
+	"rank": "swabber",
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "58582566c7141bbebbf72f0f"
+	},
+	"name": "bob",
+	"crew": {
+		"$oid": "58221406f5deffc7e8a17941"
+	},
+	"rank": "ook",
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "58584060c7141bbebbf72f10"
+	},
+	"name": "bob",
+	"rank": "cook",
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "585840b0c7141bbebbf72f11"
+	},
+	"name": "no-crew",
+	"rank": "layabout",
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "58584115c7141bbebbf72f12"
+	},
+	"name": "rerere",
+	"rank": "dfdf",
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "58584121c7141bbebbf72f13"
+	},
+	"name": "someone else",
+	"rank": "kdlfdk",
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "585844b4c7141bbebbf72f14"
+	},
+	"name": "sdlfksdlf",
+	"rank": "klkl",
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "585844d1c7141bbebbf72f15"
+	},
+	"name": "abe",
+	"rank": "tailor",
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "585844d9c7141bbebbf72f16"
+	},
+	"name": "dsf",
+	"rank": "sdsd",
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "585844f9c7141bbebbf72f17"
+	},
+	"name": "other",
+	"rank": "kk",
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5858458bc7141bbebbf72f18"
+	},
+	"name": "one more time",
+	"rank": "rank",
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "585845e6c7141bbebbf72f19"
+	},
+	"name": "nami",
+	"rank": "navigator",
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5858462fc7141bbebbf72f1a"
+	},
+	"name": "nami",
+	"crew": {
+		"$oid": "582211b1100faec433ed3b39"
+	},
+	"rank": "navigator",
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5858479cc7141bbebbf72f1b"
+	},
+	"name": "another pirate",
+	"rank": "some rank",
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "585847a8c7141bbebbf72f1c"
+	},
+	"name": "foxxy",
+	"crew": {
+		"$oid": "58221406f5deffc7e8a17941"
+	},
+	"rank": "captain",
+	"__v": 0
+}]
+
