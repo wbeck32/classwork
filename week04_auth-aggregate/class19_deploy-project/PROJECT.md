@@ -25,7 +25,7 @@ Mid-Project Guidelines
 
 Requirement by Monday morning!
 * Planning items complete
-* Everyone 
+* Everyone can push new code to heroku
 
 ## Working as a Group
 * Pairing/mobbing provides better quality consistency, but is slower over the short-term
@@ -54,7 +54,8 @@ Requirement by Monday morning!
 * Decide whether:
     1. project will be green and incrementally expanded
     1. project will be integrated heroically after the fact
-If explicitly choosing and following #1, you are doing #2
+
+If not explicitly choosing and following #1, you are doing #2
 
 
 ## Teams

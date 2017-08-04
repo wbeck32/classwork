@@ -27,6 +27,7 @@ Repo is here: https://github.com/martypdx/petsRKewl
 
 * Create account
 * Download CLI toolkit
+	* https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up
 * Deploy to Heroku
 	* Remember to specifiy engine in `package.json`:
 	```json
