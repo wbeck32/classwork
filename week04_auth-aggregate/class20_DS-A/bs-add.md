@@ -1,4 +1,4 @@
-Challenge 1: write and `add` method
+Challenge 1: write an `add` method
 ===
 
 ```js
