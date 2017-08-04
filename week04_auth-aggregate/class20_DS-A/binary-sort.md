@@ -38,6 +38,7 @@ These may be keys, that represent the thing to "find":
 ```js
 class PersonNode {
     constructor(person) {
+        // let's assume we only have valid nodes with people
         if(!person) throw new Error('"person" must be provided');
         this.value = person.name;
         this.person = person;
