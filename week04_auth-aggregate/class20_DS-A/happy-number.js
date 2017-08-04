@@ -1,12 +1,12 @@
 
 function happy(n) {
     const seen = new Set();
-    return (function recurse(n) {
+    return (function tryNumber(n) {
         seen.add(n);
         const sum = sumSquares(n);
         if(sum === 1) return true
         if(seen.has(sum)) return false;
-        return recurse(sum);
+        return tryNumber(sum);
     })(n);
 }
 
