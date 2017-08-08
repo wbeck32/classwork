@@ -18,6 +18,7 @@ class PersonNode {
 
 Write a `remove` method for the `PersonNode` class that
 takes a "name" string key and removes that node from the tree.
+You can use your find(), add() an parent
 
 ```js
 

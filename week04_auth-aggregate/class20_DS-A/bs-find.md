@@ -16,29 +16,23 @@ class PersonNode {
 ```
 
 Write a `find` method for the `PersonNode` class that
-takes a "name" string key and returns the corresponding person object:
+takes a "name" string key and returns the found node:
 
 ```js
 
-// assume "root" is root of existing tree that looks like:
+// assuming "root" is root of existing tree that looks like:
 //        ('Jones')
 //        /        \
 //  ('Brook')   ('Smith')
 //             /        
 //       ('Nelson')
 
-let person;
+let node;
 
-person = root.find('Nelson');
-// person is 
-// {
-//     name: 'Nelson',
-//     age: 46,
-//     city: 'Portland'
-// };
+node = root.find('Nelson');
+// node is ('Nelson')
 
-
-person = root.find('Foo');
-// person is "null"
+node = root.find('Foo');
+// node is null
 
 ```
