@@ -1,6 +1,11 @@
 <img src="https://cloud.githubusercontent.com/assets/478864/22186847/68223ce6-e0b1-11e6-8a62-0e3edc96725e.png" 
-width=30> Classes, `this`, Pure Components (Functions) and Components, props v state
+width=30> Intro to React and `create-react-app`
 ===
+
+## Misc
+* We will review backend projects on Wednesday
+* Keep doing codewars
+* Go over schedule
 
 ## Today's Learning Objectives
 
