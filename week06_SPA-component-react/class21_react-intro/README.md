@@ -4,84 +4,18 @@ width=30> Classes, `this`, Pure Components (Functions) and Components, props v s
 
 ## Today's Learning Objectives
 
-* Object literal shorthand
-* `class`
-* `this`
-* React
-    * Use `create-react-app` to spin up a react project
-    * Using "Components"
-    * "Pure Function" Components
-    * `props` vs `state`
-* Making AJAX calls
-    * CRA "Proxy"
+* Use `create-react-app` to develop and run a React app
+* Use JavaScript and `jsx` to render to DOM
+* Use jsx as a javascript expression in conjunction with plain JavaScript
+* Understand core React concepts: 
+    * JSX "html in JavaScript"
+    * `state` and `props`
+    * Components
+    * Render cycle
 
 ## Agenda
 
-Try it out: https://babeljs.io/repl/
-
-### Objects
-* Literal
-	* function shorthand
-	> replace `method: function() {}` with `method() {}`
-
-	* getters/setters
-	> add `get` and/or `set` in front of method name, and it becomes a
-	> property getter or setter:
-	> `get name: function() {}`
-
-	* property/variable shorthand
-	> If you are assigning a variable to a property of an object literal,
-	> and the property should have the same name as the variable, you can omit
-	> the `: value` part:
-	
-	> ```
-	> const first = 'jane';
-	> const last = 'smith';
-	> const person = { first, last }; 
-	> // instead of { first: first, last: last }
-	> ```
-
-* Destructure
-	* Assignment to variable or argument
-	* Property: `const { first, last } = person;`
-	* Array Index: `const [x, y, z] = [1, 2, 3];
-	* Always requires parens `()` in arrow function `=>`
-    * REST operator
-        * Arrays
-        > ```
-        > function do(a, b, ...rest) {}
-        > ```
-        * Objects (not "in" spec yet)
-        > ```
-        > const obj2 = {
-        >    foo: 'FOO',
-        >    bar: 'BAR',
-        >    ...obj1 
-        > }
-        > ```
-
-
-* Defaults
-	* `= value`
-
-### `class`
-
-* Prototypical Inheritence
-* Props ontop of Props
-* (Same paradigm as nested scope)
-* Favor composition over inheritence
-* Useful as container for combined behavior and state (date)
-	* Compare Class vs Higher-Order Function
-* Useful in API's as construct to build on (React `Component`)
-
-### `this`
-* Implicit based on call-site
-* Functions
-	* Explicit via `bind` and `call` and `apply`
-	* Contextless `=>` functions
-
-
-## Background
+### Background
 
 * Cycle of Thin and Thick Clients
 	* Mainframe days - "dumb terminal"
@@ -90,9 +24,10 @@ Try it out: https://babeljs.io/repl/
 	* Rise of Mobile and HTML5 - "web app", powerful client
 	* Next?
 		* Everything is a client/server, nodes on the Internet
-			* Realtime, connected
+			* Real-time, connected
 		* What class of server do you need?
 		* IoT - not just for humans :)
+        * SSR "Universal" JavaScript 
 
 * Single Page Applications
 	* View changes are programmatic, browser not refreshing
@@ -124,28 +59,36 @@ Try it out: https://babeljs.io/repl/
 	1. Application layer
 		* React offers a whole new paradigm
 	1. Let focus on build or app, but not both. 
-	1. App more relevent to start with. Then you can care about details of build system
+	1. App more relevant to start with. Then you can care about details of build system
 	1. Enter `create-react-app`...
 
-## Why React?
+### Why React?
 * JS FTW!
 * Community
 * Build System
 
-## Today's Learning Objectives
+### Create React App
 
-* Use `create-react-app` to develop and run a React app
-* Use JavaScript and `jsx` to render to DOM
-* Use jsx as a javascript expression in conjunction with plain JavaScript
-* Understand core React concepts: 
-    * JSX "html in JavaScript"
-    * `state` and `props`
-    * Components
-    * Render cycle
+Let's try it out...
 
-## Overview
+* Install via:
+
+> ```
+> > npm i -g create-react-app
+> ```
+
+* Run via:
+
+>```
+> > create-react-app my-new-app
+> > cd my-new-app
+> ```
+
 
 ### JSX
+
+Try it out: https://babeljs.io/repl/
+
 * Gets transpiled to JavaScript (that creates vdom)
 * Try [babeljs.io/repl](http://babeljs.io/repl) to see what JSX gets turned into
 * Offers declarative construct on top of React.createElement calls
