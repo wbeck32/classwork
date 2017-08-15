@@ -1,30 +1,49 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+const shortHeader = <h2>My Short Message</h2>;
+const longHeader = <h1>My Message</h1>;
 
 class App extends Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
-      name: 'World'
+      message: props.initialMessage,
+      color: '#4682b4'
     }
   }
 
-  handleClick() {
-    const name = this.state.name === 'World' ? 'Mars' : 'World';
-    this.setState({ name });
+  handleChange({ name, value }) {
+    this.setState({ 
+      [name]: value
+    });
   }
 
   render() {
+
+    const header = this.state.message.length < 20 ? shortHeader : longHeader;
+
     return (
       <div>
-        <div className="App" onClick={() => this.handleClick()}>
-          Hello {this.state.name}
-        </div>
+        {header}
         <div>
-          <input value={this.state.name} onKeypress={() => this.handleKeypress()}/>
+          <label>
+            Message:
+            <input name="message" value={this.state.message} 
+              onChange={({ target }) => this.handleChange(target)}/>
+          </label>
+          <label>
+            Color:
+            <input name="color" value={this.state.color} type="color" 
+              onChange={({ target }) => this.handleChange(target)}/>
+          </label>
+        </div>
+        <div className="display" style={{
+          color: this.state.color
+        }}>
+          {this.state.message}
         </div>
       </div>
     );
