@@ -22,13 +22,11 @@ class App extends Component {
   }
 
   fetchMovies(page) {
-    console.log('page', page);
-    const title = 'St';
     this.setState({
       movies: []
     });
 
-    fetch(`http://www.omdbapi.com/?s=${encodeURI(title)}&plot=short&r=json&page=${page}&apikey=${API_KEY}`)
+    fetch(`http://www.omdbapi.com/?s=St&plot=short&r=json&page=${page}&apikey=${API_KEY}`)
         .then(res => res.json())
         .then(data => data.Search)
         .then(movies => {
