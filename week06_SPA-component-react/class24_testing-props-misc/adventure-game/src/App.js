@@ -41,8 +41,8 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>{player.name}</h2>
-          <h2>{player.inventory.join(', ')}</h2>
+          <h6>{player.name}</h6>
+          <h6>{player.inventory.join(', ')}</h6>
         </div>
         <Room room={room} 
           onExit={this.handleExit}
