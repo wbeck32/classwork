@@ -1,18 +1,13 @@
 {
-  "name": "snapshot-testing",
+  "name": "adventure-game",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "watchman": "^0.1.8"
+    "react-dom": "^15.6.1"
   },
   "devDependencies": {
-    "enzyme": "^2.9.1",
-    "enzyme-to-json": "^1.5.1",
-    "jest": "^20.1.0-alpha.3",
-    "react-scripts": "1.0.11",
-    "react-test-renderer": "^15.6.1"
+    "react-scripts": "1.0.11"
   },
   "scripts": {
     "start": "react-scripts start",
