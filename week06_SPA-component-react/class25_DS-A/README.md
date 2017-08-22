@@ -1,9 +1,11 @@
-<img src="https://cloud.githubusercontent.com/assets/478864/22186847/68223ce6-e0b1-11e6-8a62-0e3edc96725e.png" width=30> DS&A Code Challenges
+DS&A Code Challenges
 ===
 
 ## Agenda
 
-* Challenge 1
-* Challenge 2
-* Challenge 3
-* Challenge 4
+Challenge | Time
+---|---
+Challenge 1 | 1:40 - 2:15
+Challenge 2 | 2:20 - 2:55
+Challenge 3 | 3:05 - 3:40
+Challenge 4 | 3:45 - 4:20
