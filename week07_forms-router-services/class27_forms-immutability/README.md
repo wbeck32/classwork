@@ -3,14 +3,38 @@ width=30> Review, Forms, Data Immutability
 ===
 
 ## Questions, Feedback, Misc
+* Backend Quiz makeup
+	* Need new quiz due to reference solution
+	* Will be very similar
+	* Do on own time
 * ?
 
 ## Today's Learning Objectives
 
 * Know how to edit lists in React
 	* Using immutable data
+* Begin to use key component lifecycle methods
+* Know how to use React "controlled" form inputs
 
 ## Agenda
+
+### Why immutable data?
+
+* Components are reused
+	* Re-introduce `key`
+		* Component reused by default
+	* [Component Lifecycle Methods](https://facebook.github.io/react/docs/react-component.html)
+		* `constructor`
+		* `componentWillMount`* vs `componentDidMount`
+			* [Fetching Data](https://daveceddia.com/where-fetch-data-componentwillmount-vs-componentdidmount/)
+		* `componentWillReceiveProps`
+			* Need to use when updating component that does not re-render
+		* `shouldComponentUpdate`
+			* Prevents unnecessary updates
+		* `componentWillUpdate`* and `componentDidUpdate`*
+		* `render` +1
+
+DEMO: movie list from search term
 
 ### Editing Lists
 
@@ -20,17 +44,6 @@ Core Operations
 * Edit
 
 Demo: TODO
-
-### Forms
-
-Forms and editing data
-
-* Uncontrolled components "Pull the value"
-	* form `onSubmit`
-	* `ref`
-* Controlled components
-	* all changes handled with state change
-	* matching value set and onChange
 
 
 Element	| Value property | Change callback | New value in the callback
