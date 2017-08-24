@@ -12,11 +12,9 @@ export default class AddStorePet extends Component {
   }
 
   getNewPet() {
-    const { storeId } = this.props;
     return { 
       name: '',
-      legs: 4,
-      store: storeId
+      legs: 4
     }; 
   }
 

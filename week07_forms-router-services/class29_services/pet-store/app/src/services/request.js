@@ -4,6 +4,7 @@ export const API_URL = '/api';
 
 const wrap = cmd => cmd
   .then(
+    // caller cares about the data, not http response
     r => r.body,
     ({ response }) => {
       throw response.body.error;

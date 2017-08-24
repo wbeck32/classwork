@@ -30,11 +30,11 @@ export default class PetDetail extends Component {
 
     return (
       <div>
-        <p>{pet.name} with {pet.legs || 'unknown'} legs</p>
+        <p>{pet.name} with {pet.legs != null ? pet.legs : 'unknown'} legs</p>
         <p>Housed at {pet.store.name}</p>
         <h4>Favorite Toys</h4>
         <ul>
-          {pet.toys && pet.toys.map(({ name }, i) => (
+          {pet.toys.map(({ name }, i) => (
             <li key={i}>{name}</li>
           ))}
         </ul>

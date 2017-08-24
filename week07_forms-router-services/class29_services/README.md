@@ -27,7 +27,17 @@ Data Services and Full Stack
         * build: copy to `./server/public`
             * Project runs from `3001`
             * Need to handle `sendFile` for `index.html` at other paths
-* "Services"
-    * own folder
-    * encapsulate calls based on resource
-    * isolate components from http
+
+### App Changes
+
+* Services
+    * Own folder
+    * Encapsulate calls based on resource
+    * Isolate components from http
+    * Have base "request" or "fetcher" module
+* Container Components
+    * separate data fetch/update from presentation
+    * Named "<Thing>Container", or
+    * with<Thing>
+* Actions
+    * Leave in Container Components for now...

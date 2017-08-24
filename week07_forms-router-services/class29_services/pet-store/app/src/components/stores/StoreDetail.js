@@ -22,13 +22,9 @@ export default class StoreDetail extends Component {
     this.fetchStore(params.storeId);
   }
 
-  componentWillReceiveProps(nextProps) {
-    const nextStoreId = nextProps.match.params.storeId;
-    if(nextStoreId !== this.props.match.params.storeId) {
-      this.fetchStore(nextStoreId);
-    }
-  }
 
+
+  // TODO: move data logic to container component
   fetchStore(id) {
     storesApi.get(id)
       .then(store => this.setState({ store, error: null }))
@@ -36,6 +32,8 @@ export default class StoreDetail extends Component {
   }
 
   handleAddPet = pet => {
+    pet.store = this.state.store._id;
+    
     return petsApi.add(pet)
       .then(addedPet => {
         const { store } = this.state;
@@ -49,7 +47,7 @@ export default class StoreDetail extends Component {
               addedPet
             ]
           }
-        })
+        });
       });
   }
 
@@ -78,7 +76,7 @@ export default class StoreDetail extends Component {
           position: 'absolute',
           top: 0, right: 0
         }}>
-          <AddStorePet storeId={store._id} onAdd={this.handleAddPet}/>
+          <AddStorePet onAdd={this.handleAddPet}/>
         </section>
         <ul>
           {store.pets.map(({ _id, name }) => (

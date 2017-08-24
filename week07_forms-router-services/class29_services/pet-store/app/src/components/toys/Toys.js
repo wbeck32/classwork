@@ -5,7 +5,7 @@ import AddToy from './AddToy';
 function Toys({ toys, onAdd, onDelete }) {
   return (
     <div>
-      <h2>All Our Pet Stores</h2>
+      <h2>All Toys</h2>
       <table>
         <thead>
           <tr>

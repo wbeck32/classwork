@@ -5,8 +5,7 @@ import { TextInput } from '../common/Input';
 export default class AddStore extends Component {
   constructor(props) {
     super(props);
-    // track the local form state, plus any error message from
-    // calling onAdd
+
     this.state = { 
       store: this.getNewStore(),
       error: ''

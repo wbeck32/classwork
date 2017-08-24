@@ -10,6 +10,10 @@ function getErrorHandler(log = console.log) {
             const { errors } = err;
             error = Object.keys(errors).map(key => errors[key].message);
         }
+        else if (err.name === 'CastError') {
+            code = 400;
+            error = err.message;
+        }
         else if(err.code) {
             code = err.code;
             error = err.error;

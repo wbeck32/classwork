@@ -12,11 +12,9 @@ export default function withStores(ComposedComponent) {
     constructor(props) {
       super(props);
       this.state = {
-        stores: null
+        stores: null,
+        error: null
       };
-
-      this.handleAdd = this.handleAdd.bind(this);
-      this.handleDelete = this.handleDelete.bind(this);
     }
 
     // data access using our service class
@@ -24,7 +22,7 @@ export default function withStores(ComposedComponent) {
     componentDidMount() {
       storesApi.getAll()
         .then(stores => {
-          this.setState({ stores, error: null });
+          this.setState({ stores });
         })
         .catch(error => {
           this.setState({ error });
@@ -34,7 +32,7 @@ export default function withStores(ComposedComponent) {
     // Add a store.
     // THIS component is responsible for the stores state,
     // hence it modifies the stores array (immutable style)
-    handleAdd(store) {
+    handleAdd = (store) => {
       return storesApi.add(store)
         .then(saved => {
           this.setState({
@@ -44,7 +42,7 @@ export default function withStores(ComposedComponent) {
     }
 
     // same for delete
-    handleDelete(id, index) {
+    handleDelete = (id, index) => {
       return storesApi.remove(id)
         .then(() => {
           const { stores } = this.state;

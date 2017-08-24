@@ -6,7 +6,10 @@ const schema = new Schema({
         type: String,
         required: true
     },
-    color: String,
+    color: {
+        type: String,
+        required: true
+    },
     silent: {
         type: Boolean,
         default: true
