@@ -8,8 +8,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      rooms,
-      room: rooms[0],
+      rooms: rooms,
+      items: [],
       player: {
         name: 'Yoyo',
         inventory: []
@@ -18,7 +18,6 @@ class App extends Component {
     this.handleExit = this.handleExit.bind(this);
     this.handlePickup = this.handlePickup.bind(this);
   }
-
   handleExit(room) {
     this.setState({ room });
   }
@@ -36,7 +35,8 @@ class App extends Component {
   }
 
   render() {
-    const { player, room } = this.state;
+    const { player, rooms } = this.state;
+    console.log(player, rooms);
     return (
       <div className="App">
         <div className="App-header">
@@ -44,7 +44,7 @@ class App extends Component {
           <h6>{player.name}</h6>
           <h6>{player.inventory.join(', ')}</h6>
         </div>
-        <Room room={room} 
+        <Room room={rooms[0]}
           onExit={this.handleExit}
           onPickup={this.handlePickup}
         />

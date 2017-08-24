@@ -4,7 +4,7 @@ const living = {
     name: 'Dusty Living Room',
     items: ['book', 'knife'],
     doors: ['bathroom', 'ballroom'],
-    //monsters: 
+    //monsters:
     // conditions(player) {
     //     if(player.inventory.indexOf('key') > -1) {
     //         return ['treasure']
