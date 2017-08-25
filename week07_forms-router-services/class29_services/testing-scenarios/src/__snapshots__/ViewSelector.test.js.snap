@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ViewDisplay shows detail 1`] = `
+<Detail
+  images={Array []}
+/>
+`;
+
+exports[`ViewDisplay shows gallery 1`] = `
+<Gallery
+  images={Array []}
+/>
+`;
+
+exports[`ViewDisplay shows thumbnail 1`] = `
+<Thumbnail
+  images={Array []}
+/>
+`;
+
+exports[`ViewSelector toggles to correct view 1`] = `
+<div>
+  <RadioButtons
+    views={
+      Array [
+        "thumbnail",
+        "gallery",
+        "detail",
+      ]
+    }
+  />
+  <ViewDisplay
+    images={Array []}
+    view="thumbnail"
+  />
+</div>
+`;
+
+exports[`ViewSelector toggles to correct view 2`] = `
+<div>
+  <RadioButtons
+    views={
+      Array [
+        "thumbnail",
+        "gallery",
+        "detail",
+      ]
+    }
+  />
+  <ViewDisplay
+    images={Array []}
+    view="gallery"
+  />
+</div>
+`;
+
+exports[`ViewSelector toggles to correct view 3`] = `
+<div>
+  <RadioButtons
+    views={
+      Array [
+        "thumbnail",
+        "gallery",
+        "detail",
+      ]
+    }
+  />
+  <ViewDisplay
+    images={Array []}
+    view="detail"
+  />
+</div>
+`;
