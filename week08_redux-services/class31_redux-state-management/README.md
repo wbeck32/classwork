@@ -2,6 +2,7 @@ Class 31: Redux State Management
 ===
 
 ## Questions/Feedback
+* Workload
 * ?
 
 ## Redux
