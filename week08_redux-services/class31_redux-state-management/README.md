@@ -5,6 +5,8 @@ Class 31: Redux State Management
 * Workload
 * ?
 
+## ?
+
 ## Redux
 
 ### Why?
@@ -34,6 +36,12 @@ Class 31: Redux State Management
 1. Changes are made with pure functions
     > To specify how the state tree is transformed by actions, you write pure reducers.
 
+### Install
+
+```
+> npm i redux react-redux -S
+```
+
 ### Store
 
 1. Combination of state and reducers (which take actions)
@@ -42,6 +50,7 @@ Class 31: Redux State Management
 #### Create the Store
 
 * Single store for the app
+* Usually in `index.js`, wrap `<App/>`
 * Create using:
 ```js
 import { createStore } from 'redux';
