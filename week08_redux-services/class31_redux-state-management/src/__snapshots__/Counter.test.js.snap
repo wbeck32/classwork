@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter disables decrement when count is 0 1`] = `
+<div>
+  <button
+    disabled={true}
+    onClick={[Function]}
+  >
+    -
+  </button>
+  <span
+    style={
+      Object {
+        "padding": "10px",
+      }
+    }
+  >
+    0
+  </span>
+  <button
+    onClick={[Function]}
+  >
+    +
+  </button>
+</div>
+`;
+
+exports[`Counter shows count and two buttons 1`] = `
+<div>
+  <button
+    disabled={false}
+    onClick={[Function]}
+  >
+    -
+  </button>
+  <span
+    style={
+      Object {
+        "padding": "10px",
+      }
+    }
+  >
+    3
+  </span>
+  <button
+    onClick={[Function]}
+  >
+    +
+  </button>
+</div>
+`;
