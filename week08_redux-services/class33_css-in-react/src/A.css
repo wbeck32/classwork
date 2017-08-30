@@ -1,0 +1,7 @@
+:local(.label) p {
+  color: coral; }
+
+:local(.label) button {
+  outline: 0;
+  border: 1px solid lightsteelblue;
+  background: white; }

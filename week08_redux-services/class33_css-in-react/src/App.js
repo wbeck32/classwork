@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import './B.css';
+import A from './A';
+import B from './B';
 
 class App extends Component {
   render() {
@@ -16,14 +17,6 @@ class App extends Component {
       </div>
     );
   }
-}
-
-function A() {
-  return <p>Component A</p>;
-}
-
-function B() {
-  return <p>Component B</p>;
 }
 
 export default App;

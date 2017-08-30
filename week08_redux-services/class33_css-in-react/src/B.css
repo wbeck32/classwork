@@ -1,3 +1,2 @@
-p {
-  color: steelblue;
-}
+:local(.b) {
+  color: steelblue; }
