@@ -1,11 +1,13 @@
 @import 'colors.scss';
 
+$height: 200px;
+
 .App {
   text-align: left;
 
   .header {
     background-color: $bgcolor;
-    height: 150px;
+    height: $height - 50px;
     padding: 20px;
     color: white;
 
