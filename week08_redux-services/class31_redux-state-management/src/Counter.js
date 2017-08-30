@@ -5,13 +5,13 @@ import { increment, decrement } from './counter.actions';
 export function Counter({ count, dispatch }) {
   return (
     <div>
-      <button 
-        onClick={() => dispatch(decrement())}
-        disabled={count <= 0}
-      >-</button>
+      <button onClick={() => dispatch(decrement())}
+        disabled={count <= 0}>-</button>
+
       <span style={{ padding: '10px' }}>
         {count}
       </span>
+      id
       <button onClick={() => dispatch(increment())}>+</button>
     </div>
   );
