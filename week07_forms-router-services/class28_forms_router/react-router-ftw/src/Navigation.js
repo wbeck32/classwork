@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, Route, withRouter } from 'react-router-dom';
+import { NavLink, Route, withRouter } from 'react-router-dom';
 import qs from 'qs';
 
 function Navigation({ location }) {
@@ -7,29 +7,29 @@ function Navigation({ location }) {
 
     return (
       <div>
-        <Route path="/stores" render={({ history, location }) => {
-
-          return (
-            <div>
-              <h5>view</h5>
-              {['thumbnail', 'gallery', 'detail'].map(view => {
-                return <button disabled={view===currentView} key={view} onClick={() => {
-                  history.push({ search: `?view=${view}` })  
-                }}>
-                  {view}
-                </button>;
-              })}
-            </div>
-          );
-        }}>
-        </Route>
+        <Route path="/stores" component={ViewSelector}/>
         <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/menu">Menu</Link></li>
-          <li><Link to={`/stores?view=${currentView}`}>Stores</Link></li>
+          <li><NavLink to="/">Home</NavLink></li>
+          <li><NavLink to="/menu">Menu</NavLink></li>
+          <li><NavLink to={`/stores?view=${currentView}`}>Stores</NavLink></li>
         </ul>
       </div>
     );
+}
+
+function ViewSelector() {
+  return (
+    <div>
+      <h5>view</h5>
+      {['thumbnail', 'gallery', 'detail'].map(view => {
+        return <NavLink key={view} 
+          to={{ search: `?view=${view}`}}
+          style={{ padding: 10 }}>
+          {view}
+        </NavLink>;
+      })}
+    </div>
+  );
 }
 
 export default withRouter(Navigation);
