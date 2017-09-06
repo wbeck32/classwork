@@ -14,8 +14,19 @@ const Header = (
 );
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      ready: false
+    };
+  }
   componentDidMount() {
-    this.props.checkForToken();
+    const setReady = () => this.setState({ ready: true });
+
+    this.props
+      .checkForToken()
+      .then(setReady, setReady);
   }
 
   render() {
@@ -24,17 +35,24 @@ class App extends Component {
         <div className="App">
           {Header}
           <main>
-            <Routes/>
+            {this.state.ready && <Routes/>}
           </main>
+          <Footer render={name => <span>Hello {name}</span>}/>
         </div>
       </Router>
     );
   }
 }
 
+function Footer(props) {
+  console.log('Footer props', props);
+  return props.render('bob');
+  // return <div>This is the footer {props.children}</div>;
+}
+
 export default connect(
   state => ({ user: state.user }),
   dispatch => ({ 
-    checkForToken() { dispatch(checkForToken()); }  
+    checkForToken() { return dispatch(checkForToken()); }  
   })
 )(App);
