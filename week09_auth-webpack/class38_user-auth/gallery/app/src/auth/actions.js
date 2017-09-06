@@ -9,7 +9,7 @@ export function checkForToken() {
 
     dispatch({ type: actions.GOT_TOKEN, payload: token });
 
-    authApi.verify()
+    return authApi.verify()
       .then(() => authApi.getUser())
       .then(user => {
         dispatch({ type: actions.FETCHED_USER, payload: user });
