@@ -17,6 +17,12 @@ const ChatForm = styled.form`
   button { width: 19%; background: rgb(130, 224, 255); border: none; padding: 10px; }
 `;
 
+const Scroll = styled.div`
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 100px;
+  overflow-y: auto;
+`;
+
 const User = ({ user }) => {
   const label = user && (user.name || user.email);
   return (
@@ -29,20 +35,27 @@ const User = ({ user }) => {
 export function Chat({ messages, sendMessage }) {
   return (
     <div>
-      <List>
-        {messages.map((message, i) => (
-          <li key={i}>
-            <User user={message.user}/> {message.text}
-          </li>
-        ))}
-      </List>
+      <Scroll>
+        <List>
+          {messages.map((message, i) => (
+            <li key={i}>
+              <div><User user={message.user}/> {message.text}</div>
+              <img alt={message.text} style={{ height: 50 }} src={message.url}/>
+            </li>
+          ))}
+        </List>
+      </Scroll>
       <ChatForm onSubmit={event => {
         event.preventDefault();
         const elements = event.target.elements;
-        sendMessage(elements.message.value);
+        sendMessage({
+          url: elements.url.value,
+          text: elements.message.value
+        });
         event.target.reset();
       }}>
         <input name="message" autoComplete="off" />
+        <hr/>
         <input name="url" autoComplete="off" />
         <button>Send</button>
       </ChatForm>

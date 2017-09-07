@@ -26,6 +26,6 @@ socket.on('messages', messages => {
 export function sendMessage(message) {
   return dispatch => {
     socket.emit('message', message);
-    dispatch({ type: SEND_MESSAGE, payload: { text: message } });
+    dispatch({ type: SEND_MESSAGE, payload: message });
   };
 }

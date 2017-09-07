@@ -12,10 +12,11 @@ module.exports = http => {
         let user = null;
 
         const receiveMessage = message => {
-            messages.push({ text: message, user });
+            message.user = user;
+            messages.push(message);
             if(messages.length > 10) messages.shift();
 
-            socket.broadcast.emit('message', { text: message, user });
+            socket.broadcast.emit('message', message);
         };
 
         socket.on('auth', token => {
