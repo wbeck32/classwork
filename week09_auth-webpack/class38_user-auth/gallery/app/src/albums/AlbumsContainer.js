@@ -17,7 +17,12 @@ function mapDispatchToProps(dispatch) {
 
 const AlbumsContainer = connect(
   mapStateToProps, 
-  mapDispatchToProps
+  mapDispatchToProps,
+  // mergeProps
+  (stateProps, dispatchProps, ownProps) => {
+    // you can manipulate props here to change things
+    return { ...stateProps, ...dispatchProps, ...ownProps };
+  }
 )(Albums);
 
 // export the wrapper
