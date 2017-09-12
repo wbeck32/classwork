@@ -18,15 +18,15 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      ready: false
+      ready: true
     };
   }
   componentDidMount() {
-    const setReady = () => this.setState({ ready: true });
+    // const setReady = () => this.setState({ ready: true });
 
     this.props
       .checkForToken()
-      .then(setReady, setReady);
+      // .then(setReady, setReady);
   }
 
   render() {

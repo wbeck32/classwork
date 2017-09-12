@@ -16,7 +16,7 @@ export default () => (
   <Switch> 
     <Route exact path="/" render={() => <Home/>}/>;
     <Route path="/auth" render={() => <Auth/>}/>
-    <PrivateRoute exact path="/albums" render={() => <Albums/>}/>;
+    <PrivateRoute exact path="/albums" component={Albums}/>;
     <PrivateRoute path="/albums/:id" render={({ match }) => <AlbumDetail id={match.params.id}/>}/>;
     <Redirect to="/"/>
   </Switch>  
